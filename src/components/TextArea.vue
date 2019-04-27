@@ -1,6 +1,6 @@
 <template>
     <div>
-        <vs-textarea v-on:change="changePDFText" v-model="pdfText" label="Enter the text you want to translate here" width="300px" height="500px"/>
+        <vs-textarea v-on:change="changePDFText" v-model="pdfText" label="Enter the text you want to learn here" width="300px" height="500px"/>
     </div>
 </template>
 
