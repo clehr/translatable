@@ -1,8 +1,8 @@
 <template>
     <div class="center">
         <h2>Translator</h2>
-        <vs-input label-placeholder="German" v-model="value1"/>
-        <vs-input label-placeholder="French" v-model="value2"/>
+        <vs-input label-placeholder="German" v-model="textToTranslate"/>
+        <vs-input label-placeholder="French" v-model="translatedText"/>
         <br>
         <vs-button v-on:click="translate">Translate</vs-button>
     </div>
@@ -15,16 +15,16 @@
         name: 'Translator',
         data() {
             return {
-                value1: '',
-                value2: ''
+                textToTranslate: '',
+                translatedText: ''
             }
         },
         methods: {
             translate: function () {
-                let url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=de&tl=fr&dt=t&q=${this.value1}`;
+                let url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=de&tl=fr&dt=t&q=${this.textToTranslate}`;
                 axios.get(url)
                     .then(response => {
-                        this.value2 = response.data[0][0][0]
+                        this.translatedText = response.data[0][0][0]
                     })
                     .catch(e => {
                         this.errors.push(e)
