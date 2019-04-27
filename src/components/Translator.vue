@@ -9,6 +9,8 @@
 </template>
 
 <script>
+    import axios from 'axios';
+
     export default {
         name: 'Translator',
         data() {
@@ -19,7 +21,15 @@
         },
         methods: {
             translate: function () {
-               console.log("test")
+                axios.get(`http://jsonplaceholder.typicode.com/posts`)
+                    .then(response => {
+                        // JSON responses are automatically parsed.
+                        this.posts = response.data
+                        console.log(this.posts)
+                    })
+                    .catch(e => {
+                        this.errors.push(e)
+                    })
             }
         }
     }
