@@ -21,16 +21,15 @@
         },
         methods: {
             translate: function () {
-                axios.get(`http://jsonplaceholder.typicode.com/posts`)
+                let url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=de&tl=fr&dt=t&q=${this.value1}`;
+                axios.get(url)
                     .then(response => {
-                        // JSON responses are automatically parsed.
-                        this.posts = response.data
-                        console.log(this.posts)
+                        this.value2 = response.data[0][0][0]
                     })
                     .catch(e => {
                         this.errors.push(e)
                     })
-            }
+            },
         }
     }
 </script>
