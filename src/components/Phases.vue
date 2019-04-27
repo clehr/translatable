@@ -13,12 +13,6 @@
 <script>
     export default {
         name: 'Phases',
-        data() {
-            return {
-                value1: 'bruit',
-                value2: 'Geräusch'
-            }
-        }
     }
 </script>
 
