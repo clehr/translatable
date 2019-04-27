@@ -1,6 +1,6 @@
 <template>
     <div class="center">
-        <vs-button v-on:click="createPDF">Export to PDF</vs-button>
+        <vs-button v-on:click="createPDF">Print as PDF</vs-button>
     </div>
 </template>
 
