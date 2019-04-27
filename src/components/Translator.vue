@@ -37,7 +37,8 @@
         </vs-row>
 
         <vs-row class="shorten">
-            <vs-input :label-placeholder=sourceLanguage v-model="textToTranslate" @keyup.enter="translate"/>
+            <vs-input :success="this.textToTranslate !== ''" :danger="this.textToTranslate === ''" danger-text="Enter the word you want to translate"
+                      :label-placeholder=sourceLanguage v-model="textToTranslate" @keyup.enter="translate"/>
             <vs-input :label-placeholder=targetLanguage v-model="translatedText" @keyup.enter="translate"/>
         </vs-row>
 
@@ -59,7 +60,7 @@
                     {name: "Spanish", locale: "es"},
                     {name: "Chinese", locale: "zh"},
                     {name: "Portuguese", locale: "ps"}],
-                sourceLanguage: 'word you want to translate',
+                sourceLanguage: '',
                 targetLanguage: 'translated word',
             }
         },
