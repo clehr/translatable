@@ -1,17 +1,18 @@
 <template>
     <div class="center">
-        <h2>Translator</h2>
-        <br>
-        <vs-input label-placeholder="German" v-model="value1"/>
-        <vs-input label-placeholder="French" v-model="value2"/>
-        <br>
-        <vs-button>Translate</vs-button>
+        <h2>Phases</h2>
+        <p><b>1. Translate:</b> Decode your text word for word</p>
+        <p><b>2. Active hearing:</b> Read your translation as you hear the text in the foreign language</p>
+        <p><b>3. Passive hearing:</b> Hear the text several times while doing something else like cleaning watching TV,
+            etc.</p>
+        <p><b>4. Speak:</b> Hear the text in the foreign language and speak along with it or pause after every sentence to
+            repeat it.</p>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'Translator',
+        name: 'Phases',
         data() {
             return {
                 value1: 'bruit',
@@ -44,6 +45,9 @@
     div {
         margin-left: auto;
         margin-right: auto;
+    }
+    p {
+        margin: 10px 10px 10px 10px;
     }
 
 </style>

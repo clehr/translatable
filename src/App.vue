@@ -3,6 +3,7 @@
     <Heading/>
     <TextArea/>
     <Translator/>
+    <Phases/>
   </div>
 </template>
 
@@ -10,10 +11,12 @@
 import TextArea from './components/TextArea.vue'
 import Translator from "./components/Translator";
 import Heading from "./components/Heading";
+import Phases from "./components/Phases";
 
 export default {
   name: 'app',
   components: {
+    Phases,
     Heading,
     Translator,
     TextArea
