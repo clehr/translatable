@@ -1,4 +1,4 @@
-# languagelearner
+# translatable
 
 ## Project setup
 ```
