@@ -1,6 +1,6 @@
 <template>
     <div class="center">
-        <h2>4 Phases to learn your language the quickest way</h2>
+        <h2 class="margin-bottom">4 Phases to learn your language the quickest way</h2>
 
         <vs-row class="margin-bottom" vs-justify="center">
             <b>1. Translate:</b> Decode your text word for word. It doesn't matter when the translation sounds weird. It is
