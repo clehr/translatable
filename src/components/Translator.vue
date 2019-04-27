@@ -1,43 +1,47 @@
 <template>
     <div class="center">
-        <h2>Translator</h2>
+        <h2 class="margin-bottom">Translator</h2>
 
-        <div class="dropdown">
-            <vs-dropdown>
-                <a class="a-icon" href="#">
-                    Source language
-                    <vs-icon class="" icon="expand_more"></vs-icon>
-                </a>
+        <vs-row class="shorten">
+            <div class="dropdown">
+                <vs-dropdown>
+                    <a class="a-icon" href="#">
+                        Source language
+                        <vs-icon class="" icon="expand_more"></vs-icon>
+                    </a>
 
-                <vs-dropdown-menu class="menu">
-                    <vs-dropdown-item v-for="language in languages" v-bind:key="language.name"
-                                      v-on:click="setSourceLanguage">
-                        {{language.name}}
-                    </vs-dropdown-item>
-                </vs-dropdown-menu>
-            </vs-dropdown>
-        </div>
+                    <vs-dropdown-menu class="menu">
+                        <vs-dropdown-item v-for="language in languages" v-bind:key="language.name"
+                                          v-on:click="setSourceLanguage">
+                            {{language.name}}
+                        </vs-dropdown-item>
+                    </vs-dropdown-menu>
+                </vs-dropdown>
+            </div>
 
-        <vs-input :label-placeholder=sourceLanguage v-model="textToTranslate" @keyup.enter="translate"/>
+            <div class="dropdown">
+                <vs-dropdown>
+                    <a class="a-icon" href="#">
+                        Target language
+                        <vs-icon class="" icon="expand_more"></vs-icon>
+                    </a>
 
-        <div class="dropdown">
-            <vs-dropdown>
-                <a class="a-icon" href="#">
-                    Target language
-                    <vs-icon class="" icon="expand_more"></vs-icon>
-                </a>
+                    <vs-dropdown-menu class="menu">
+                        <vs-dropdown-item v-for="language in languages" v-bind:key="language.name"
+                                          v-on:click="setTargetLanguage">
+                            {{language.name}}
+                        </vs-dropdown-item>
+                    </vs-dropdown-menu>
+                </vs-dropdown>
+            </div>
+        </vs-row>
 
-                <vs-dropdown-menu class="menu">
-                    <vs-dropdown-item v-for="language in languages" v-bind:key="language.name"
-                                      v-on:click="setTargetLanguage">
-                        {{language.name}}
-                    </vs-dropdown-item>
-                </vs-dropdown-menu>
-            </vs-dropdown>
-        </div>
-        <vs-input :label-placeholder=targetLanguage v-model="translatedText" @keyup.enter="translate"/>
+        <vs-row class="shorten">
+            <vs-input :label-placeholder=sourceLanguage v-model="textToTranslate" @keyup.enter="translate"/>
+            <vs-input :label-placeholder=targetLanguage v-model="translatedText" @keyup.enter="translate"/>
+        </vs-row>
 
-        <vs-button v-on:click="translate">Translate (Enter)</vs-button>
+        <vs-button class="margin-top" v-on:click="translate">Translate (Enter)</vs-button>
     </div>
 </template>
 
@@ -126,6 +130,10 @@
     }
     .menu {
         width:100px;
+    }
+
+    .shorten {
+        width:70% !important;
     }
 
 </style>
