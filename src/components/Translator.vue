@@ -1,7 +1,51 @@
 <template>
     <div class="center">
         <h2>Translator</h2>
+
+        <div class="dropdown">
+            <vs-dropdown>
+                <a class="a-icon" href="#">
+                    Source language
+                    <vs-icon class="" icon="expand_more"></vs-icon>
+                </a>
+
+                <vs-dropdown-menu>
+                    <vs-dropdown-item>
+                        German
+                    </vs-dropdown-item >
+                    <vs-dropdown-item divider>
+                        English
+                    </vs-dropdown-item>
+                    <vs-dropdown-item divider>
+                        French
+                    </vs-dropdown-item>
+                </vs-dropdown-menu>
+            </vs-dropdown>
+        </div>
+
         <vs-input label-placeholder="German" v-model="textToTranslate"/>
+
+
+        <div class="dropdown">
+            <vs-dropdown>
+                <a class="a-icon" href="#">
+                    Target language
+                    <vs-icon class="" icon="expand_more"></vs-icon>
+                </a>
+
+                <vs-dropdown-menu>
+                    <vs-dropdown-item>
+                        German
+                    </vs-dropdown-item >
+                    <vs-dropdown-item divider>
+                        English
+                    </vs-dropdown-item>
+                    <vs-dropdown-item divider>
+                        French
+                    </vs-dropdown-item>
+                </vs-dropdown-menu>
+            </vs-dropdown>
+        </div>
         <vs-input label-placeholder="French" v-model="translatedText"/>
         <br>
         <vs-button v-on:click="translate">Translate</vs-button>
@@ -57,6 +101,24 @@
     div {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .dropdown {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .a-icon {
+        outline: none;
+        text-decoration: none !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    i {
+        font-size: 18px;
     }
 
 </style>
