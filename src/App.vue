@@ -3,7 +3,7 @@
         <Heading class="margin-bottom"/>
         <TextArea @inputData="onTextAreaComponentChange" class="margin-bottom"/>
         <hr>
-        <Translator class="margin-bottom"/>
+        <Translator class="margin-bottom margin-top"/>
         <hr>
         <Phases class="margin-bottom margin-top"/>
         <PDFExport :pdfText=this.pdfText />
