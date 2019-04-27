@@ -10,15 +10,9 @@
                 </a>
 
                 <vs-dropdown-menu>
-                    <vs-dropdown-item>
-                        German
+                    <vs-dropdown-item v-for="language in languages" v-bind:key="language.id">
+                        {{language}}
                     </vs-dropdown-item >
-                    <vs-dropdown-item divider>
-                        English
-                    </vs-dropdown-item>
-                    <vs-dropdown-item divider>
-                        French
-                    </vs-dropdown-item>
                 </vs-dropdown-menu>
             </vs-dropdown>
         </div>
@@ -34,15 +28,9 @@
                 </a>
 
                 <vs-dropdown-menu>
-                    <vs-dropdown-item>
-                        German
+                    <vs-dropdown-item v-for="language in languages" v-bind:key="language.id">
+                        {{language}}
                     </vs-dropdown-item >
-                    <vs-dropdown-item divider>
-                        English
-                    </vs-dropdown-item>
-                    <vs-dropdown-item divider>
-                        French
-                    </vs-dropdown-item>
                 </vs-dropdown-menu>
             </vs-dropdown>
         </div>
@@ -60,7 +48,8 @@
         data() {
             return {
                 textToTranslate: '',
-                translatedText: ''
+                translatedText: '',
+                languages: ['German', 'French', 'Spanish', 'Chinese', 'Portuguese']
             }
         },
         methods: {
