@@ -23,6 +23,7 @@
         </div>
 
         <vs-input :label-placeholder=sourceLanguage v-model="textToTranslate"/>
+        <br>
 
         <div class="dropdown">
             <vs-dropdown>
