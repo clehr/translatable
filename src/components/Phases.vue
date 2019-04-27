@@ -2,24 +2,27 @@
     <div class="center">
         <h2 class="margin-bottom">4 Phases to learn your language the quickest way</h2>
 
-        <vs-row class="margin-bottom" vs-justify="center">
-            <b>1. Translate:</b> Decode your text word for word. It doesn't matter if the translation sounds weird. It is
-            even helpful because it helps you understanding the structure of the language you want to learn better.
-        </vs-row>
+        <div class="margin-bottom">
+            <h3>1. Translate:</h3>
+            Decode your text word for word. It doesn't matter if the translation sounds weird. It is even helpful
+            because it
+            helps you understanding the structure of the language you want to learn better.
+        </div>
 
-        <vs-row class="margin-bottom" vs-justify="center">
-            <b>2. Active hearing:</b>Read your translation as you hear the text in the foreign language.
-        </vs-row>
+        <div class="margin-bottom">
+            <h3>2. Active hearing:</h3>
+            Read your translation as you hear the text in the foreign language.
+        </div>
 
-        <vs-row class="margin-bottom" vs-justify="center">
-            <b>3. Passive hearing:</b>Hear the text several times while doing something else like cleaning watching TV,
-                etc.
-        </vs-row>
+        <div class="margin-bottom">
+            <h3>3. Passive hearing:</h3>
+            Hear the text several times while doing something else like cleaning watching TV, etc.
+        </div>
 
-        <vs-row class="margin-bottom" vs-justify="center">
-            <b>4. Speak:</b> Hear the text in the foreign language and speak along with it or pause after every sentence to
-                repeat it.
-        </vs-row>
+        <div class="margin-bottom">
+            <h3>4. Speak:</h3>
+            Hear the text in the foreign language and speak along with it or pause after every sentence to repeat it.
+        </div>
     </div>
 </template>
 
