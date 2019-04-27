@@ -10,7 +10,7 @@
                 </a>
 
                 <vs-dropdown-menu>
-                    <vs-dropdown-item v-for="language in languages" v-bind:key="language.id" >
+                    <vs-dropdown-item v-for="language in languages" v-bind:key="language.id" v-on:click="setSourceLanguage">
                         {{language[0]}}
                     </vs-dropdown-item >
                 </vs-dropdown-menu>
@@ -27,9 +27,9 @@
                 </a>
 
                 <vs-dropdown-menu>
-                    <vs-dropdown-item v-for="language in languages" v-bind:key="language.id">
+                    <vs-dropdown-item v-for="language in languages" v-bind:key="language.id" v-on:click="setTargetLanguage">
                         {{language[0]}}
-                    </vs-dropdown-item >
+                    </vs-dropdown-item>
                 </vs-dropdown-menu>
             </vs-dropdown>
         </div>
@@ -49,8 +49,8 @@
                 textToTranslate: '',
                 translatedText: '',
                 languages: [['German', 'de'], ['French', 'fr'], ['Spanish', 'es'], ['Chinese', 'zh'], ['Portuguese', 'ps']],
-                sourceLanguage: 'German',
-                targetLanguage: 'French'
+                sourceLanguage: '',
+                targetLanguage: ''
             }
         },
         methods: {
@@ -65,8 +65,10 @@
                     })
             },
             setSourceLanguage: function(event) {
-                console.log(event.target)
-                this.sourceLanguage = event.target.valueOf()
+                this.sourceLanguage = event.target.innerText
+            },
+            setTargetLanguage: function(event) {
+                this.targetLanguage = event.target.innerText
             }
         }
     }
