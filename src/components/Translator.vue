@@ -10,15 +10,14 @@
                 </a>
 
                 <vs-dropdown-menu>
-                    <vs-dropdown-item v-for="language in languages" v-bind:key="language.id">
-                        {{language}}
+                    <vs-dropdown-item v-for="language in languages" v-bind:key="language.id" >
+                        {{language[0]}}
                     </vs-dropdown-item >
                 </vs-dropdown-menu>
             </vs-dropdown>
         </div>
 
-        <vs-input label-placeholder="German" v-model="textToTranslate"/>
-
+        <vs-input :label-placeholder=sourceLanguage v-model="textToTranslate"/>
 
         <div class="dropdown">
             <vs-dropdown>
@@ -29,12 +28,12 @@
 
                 <vs-dropdown-menu>
                     <vs-dropdown-item v-for="language in languages" v-bind:key="language.id">
-                        {{language}}
+                        {{language[0]}}
                     </vs-dropdown-item >
                 </vs-dropdown-menu>
             </vs-dropdown>
         </div>
-        <vs-input label-placeholder="French" v-model="translatedText"/>
+        <vs-input :label-placeholder=targetLanguage v-model="translatedText"/>
         <br>
         <vs-button v-on:click="translate">Translate</vs-button>
     </div>
@@ -49,7 +48,9 @@
             return {
                 textToTranslate: '',
                 translatedText: '',
-                languages: ['German', 'French', 'Spanish', 'Chinese', 'Portuguese']
+                languages: [['German', 'de'], ['French', 'fr'], ['Spanish', 'es'], ['Chinese', 'zh'], ['Portuguese', 'ps']],
+                sourceLanguage: 'German',
+                targetLanguage: 'French'
             }
         },
         methods: {
@@ -63,6 +64,10 @@
                         this.errors.push(e)
                     })
             },
+            setSourceLanguage: function(event) {
+                console.log(event.target)
+                this.sourceLanguage = event.target.valueOf()
+            }
         }
     }
 </script>
