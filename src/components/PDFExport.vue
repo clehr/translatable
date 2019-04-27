@@ -1,12 +1,27 @@
 <template>
     <div class="center">
-       <vs-button>Export to PDF</vs-button>
+       <vs-button v-on:click="createPDF">Export to PDF</vs-button>
     </div>
 </template>
 
 <script>
+    import jsPDF from 'jspdf'
+
     export default {
         name: 'PDFExport',
+        data() {
+            return {
+                pdfText: 'Test',
+            }
+        },
+        methods: {
+            createPDF () {
+                let pdfName = 'test';
+                var doc = new jsPDF();
+                doc.text(this.pdfText, 10, 10);
+                doc.save(pdfName + '.pdf');
+            }
+        }
     }
 </script>
 
