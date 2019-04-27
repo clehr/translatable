@@ -39,4 +39,8 @@
     a {
         color: #42b983;
     }
+
+    textarea {
+        height: 300px;
+    }
 </style>
