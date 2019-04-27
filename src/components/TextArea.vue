@@ -1,12 +1,22 @@
 <template>
     <div>
-        <vs-textarea label="Enter the text you want to translate here" width="300px" height="500px"/>
+        <vs-textarea v-on:change="changePDFText" v-model="pdfText" label="Enter the text you want to translate here" width="300px" height="500px"/>
     </div>
 </template>
 
 <script>
     export default {
         name: 'TextArea',
+        data() {
+            return {
+                pdfText: ''
+            }
+        },
+        methods: {
+            changePDFText() {
+                this.$emit("inputData", this.pdfText);
+            }
+        }
     }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <Heading class="margin-bottom"/>
-        <TextArea class="margin-bottom"/>
+        <TextArea @inputData="onTextAreaComponentChange" class="margin-bottom"/>
         <hr>
         <Translator class="margin-bottom"/>
         <hr>
