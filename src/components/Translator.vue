@@ -60,7 +60,7 @@
                     {name: "Spanish", locale: "es"},
                     {name: "Chinese", locale: "zh"},
                     {name: "Portuguese", locale: "ps"}],
-                sourceLanguage: '',
+                sourceLanguage: 'word to translate',
                 targetLanguage: 'translated word',
             }
         },
