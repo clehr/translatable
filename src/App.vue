@@ -1,9 +1,11 @@
 <template>
   <div id="app">
-    <Heading/>
-    <TextArea/>
-    <Translator/>
-    <Phases/>
+    <Heading class="margin-bottom"/>
+    <TextArea class="margin-bottom"/>
+      <hr>
+    <Translator class="margin-bottom"/>
+      <hr>
+    <Phases class="margin-bottom margin-top"/>
     <PDFExport/>
   </div>
 </template>
@@ -35,5 +37,12 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+    .margin-bottom {
+        margin-bottom: 30px;
+    }
+
+.margin-top {
+    margin-top: 20px;
 }
 </style>
