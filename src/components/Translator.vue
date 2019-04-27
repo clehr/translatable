@@ -13,7 +13,7 @@
                     <vs-icon class="" icon="expand_more"></vs-icon>
                 </a>
 
-                <vs-dropdown-menu>
+                <vs-dropdown-menu class="menu">
                     <vs-dropdown-item v-for="language in languages" v-bind:key="language.name"
                                       v-on:click="setSourceLanguage">
                         {{language.name}}
@@ -31,7 +31,7 @@
                     <vs-icon class="" icon="expand_more"></vs-icon>
                 </a>
 
-                <vs-dropdown-menu>
+                <vs-dropdown-menu class="menu">
                     <vs-dropdown-item v-for="language in languages" v-bind:key="language.name"
                                       v-on:click="setTargetLanguage">
                         {{language.name}}
@@ -125,6 +125,9 @@
 
     i {
         font-size: 18px;
+    }
+    .menu {
+        width:100px;
     }
 
 </style>
