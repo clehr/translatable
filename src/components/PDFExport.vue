@@ -1,12 +1,12 @@
 <template>
-    <div>
-        <h1>Welcome to Translatable!</h1>
+    <div class="center">
+       <vs-button>Export to PDF</vs-button>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'Heading',
+        name: 'PDFExport',
     }
 </script>
 
@@ -29,4 +29,13 @@
     a {
         color: #42b983;
     }
+
+    div {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    p {
+        margin: 10px 10px 10px 10px;
+    }
+
 </style>

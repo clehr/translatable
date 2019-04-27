@@ -4,6 +4,7 @@
     <TextArea/>
     <Translator/>
     <Phases/>
+    <PDFExport/>
   </div>
 </template>
 
@@ -12,10 +13,12 @@ import TextArea from './components/TextArea.vue'
 import Translator from "./components/Translator";
 import Heading from "./components/Heading";
 import Phases from "./components/Phases";
+import PDFExport from "./components/PDFExport";
 
 export default {
   name: 'app',
   components: {
+    PDFExport,
     Phases,
     Heading,
     Translator,

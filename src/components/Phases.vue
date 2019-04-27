@@ -1,6 +1,6 @@
 <template>
     <div class="center">
-        <h2>Phases</h2>
+        <h2>Phases to learn your language the quickest way</h2>
         <p><b>1. Translate:</b> Decode your text word for word</p>
         <p><b>2. Active hearing:</b> Read your translation as you hear the text in the foreign language</p>
         <p><b>3. Passive hearing:</b> Hear the text several times while doing something else like cleaning watching TV,
