@@ -1,6 +1,6 @@
 <template>
     <div class="center">
-       <vs-button v-on:click="createPDF">Export to PDF</vs-button>
+        <vs-button v-on:click="createPDF">Export to PDF</vs-button>
     </div>
 </template>
 
@@ -9,18 +9,16 @@
 
     export default {
         name: 'PDFExport',
-        data() {
-            return {
-                pdfText: 'Test',
-            }
+        props: {
+            pdfText: String
         },
         methods: {
-            createPDF () {
+            createPDF() {
                 let pdfName = 'test';
                 var doc = new jsPDF();
                 doc.text(this.pdfText, 10, 10);
                 doc.save(pdfName + '.pdf');
-            }
+            },
         }
     }
 </script>
@@ -49,6 +47,7 @@
         margin-left: auto;
         margin-right: auto;
     }
+
     p {
         margin: 10px 10px 10px 10px;
     }
