@@ -1,21 +1,29 @@
 <template>
     <div class="center">
         <h2>Translator</h2>
-        <br>
         <vs-input label-placeholder="German" v-model="value1"/>
         <vs-input label-placeholder="French" v-model="value2"/>
         <br>
-        <vs-button>Translate</vs-button>
+        <vs-button v-on:click="translate">Translate</vs-button>
     </div>
 </template>
 
 <script>
+    import {Vue} from "vue-axios";
+
     export default {
         name: 'Translator',
         data() {
             return {
-                value1: 'bruit',
-                value2: 'Geräusch'
+                value1: '',
+                value2: ''
+            }
+        },
+        methods: {
+            translate: function () {
+                Vue.axios.get("https://api.predic8.de/shop/").then((response) => {
+                    console.log(response.data)
+                })
             }
         }
     }
