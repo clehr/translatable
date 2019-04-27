@@ -39,7 +39,7 @@
         <vs-row class="shorten">
             <vs-input :success="this.textToTranslate !== '' && this.sourceLanguage !== 'word to translate'" :danger="this.textToTranslate === '' || this.sourceLanguage === 'word to translate'" danger-text="Enter the word you want to translate and select a language"
                       :label-placeholder=sourceLanguage v-model="textToTranslate" @keyup.enter="translate"/>
-            <vs-input :danger="this.targetLanguage === 'translated word'" danger-text="Select a language" :label-placeholder=targetLanguage v-model="translatedText" @keyup.enter="translate"/>
+            <vs-input :danger="this.targetLanguage === 'translated word'" :success="this.targetLanguage !== 'translated word'" danger-text="Select a language" :label-placeholder=targetLanguage v-model="translatedText" @keyup.enter="translate"/>
         </vs-row>
 
         <vs-button class="margin-top" v-on:click="translate">Translate (Enter)</vs-button>
