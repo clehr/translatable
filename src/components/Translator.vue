@@ -10,9 +10,10 @@
                 </a>
 
                 <vs-dropdown-menu>
-                    <vs-dropdown-item v-for="language in languages" v-bind:key="language.id" v-on:click="setSourceLanguage">
-                        {{language[0]}}
-                    </vs-dropdown-item >
+                    <vs-dropdown-item v-for="language in languages" v-bind:key="language.name"
+                                      v-on:click="setSourceLanguage">
+                        {{language.name}}
+                    </vs-dropdown-item>
                 </vs-dropdown-menu>
             </vs-dropdown>
         </div>
@@ -27,8 +28,9 @@
                 </a>
 
                 <vs-dropdown-menu>
-                    <vs-dropdown-item v-for="language in languages" v-bind:key="language.id" v-on:click="setTargetLanguage">
-                        {{language[0]}}
+                    <vs-dropdown-item v-for="language in languages" v-bind:key="language.name"
+                                      v-on:click="setTargetLanguage">
+                        {{language.name}}
                     </vs-dropdown-item>
                 </vs-dropdown-menu>
             </vs-dropdown>
@@ -48,14 +50,20 @@
             return {
                 textToTranslate: '',
                 translatedText: '',
-                languages: [['German', 'de'], ['French', 'fr'], ['Spanish', 'es'], ['Chinese', 'zh'], ['Portuguese', 'ps']],
+                languages: [{name: "German", locale: "de"},
+                    {name: "French", locale: "fr"},
+                    {name: "Spanish", locale: "es"},
+                    {name: "Chinese", locale: "zh"},
+                    {name: "Portuguese", locale: "ps"}],
                 sourceLanguage: '',
-                targetLanguage: ''
+                targetLanguage: '',
             }
         },
         methods: {
             translate: function () {
-                let url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=de&tl=fr&dt=t&q=${this.textToTranslate}`;
+                let sourceLocale = this.languages.find(language => this.sourceLanguage === language.name).locale;
+                let targetLocale = this.languages.find(language => this.targetLanguage === language.name).locale;
+                let url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${sourceLocale}&tl=${targetLocale}&dt=t&q=${this.textToTranslate}`;
                 axios.get(url)
                     .then(response => {
                         this.translatedText = response.data[0][0][0]
@@ -64,10 +72,10 @@
                         this.errors.push(e)
                     })
             },
-            setSourceLanguage: function(event) {
+            setSourceLanguage: function (event) {
                 this.sourceLanguage = event.target.innerText
             },
-            setTargetLanguage: function(event) {
+            setTargetLanguage: function (event) {
                 this.targetLanguage = event.target.innerText
             }
         }
