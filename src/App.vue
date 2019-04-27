@@ -2,11 +2,10 @@
     <div id="app">
         <Heading class="margin-bottom"/>
         <TextArea @inputData="onTextAreaComponentChange" class="margin-bottom"/>
-        <hr>
+        <PDFExport :pdfText=this.pdfText />
         <Translator class="margin-bottom margin-top"/>
         <hr>
         <Phases class="margin-bottom margin-top"/>
-        <PDFExport :pdfText=this.pdfText />
     </div>
 </template>
 

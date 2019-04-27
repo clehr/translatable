@@ -42,7 +42,7 @@
             <vs-input :danger="this.targetLanguage === 'translated word'" :success="this.targetLanguage !== 'translated word'" danger-text="Select a language" :label-placeholder=targetLanguage v-model="translatedText" @keyup.enter="translate"/>
         </vs-row>
 
-        <vs-button class="margin-top" v-on:click="translate">Translate (Enter)</vs-button>
+        <vs-button class="margin-top" v-on:click="translate" type="line" size="large">Translate (Enter)</vs-button>
     </div>
 </template>
 

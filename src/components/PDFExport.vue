@@ -1,6 +1,6 @@
 <template>
     <div class="center">
-        <vs-button v-on:click="createPDF">Print as PDF</vs-button>
+        <vs-button v-on:click="createPDF" type="line" size="large" icon="get_app">Print as PDF</vs-button>
     </div>
 </template>
 
