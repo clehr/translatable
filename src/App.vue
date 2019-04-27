@@ -57,8 +57,8 @@
     }
 
     .center {
-        margin-left: 42%;
-        margin-right: 40%;
+        margin-left: 45%;
+        margin-right: 45%;
         margin-bottom: 4%;
     }
 </style>
