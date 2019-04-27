@@ -28,7 +28,7 @@
         },
         data: function () {
             return {
-                pdfText: 'Hallo'
+                pdfText: ''
             };
         },
         methods: {
