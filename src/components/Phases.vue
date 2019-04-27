@@ -1,5 +1,5 @@
 <template>
-    <div class="center">
+    <div class="shorten">
         <h2 class="margin-bottom">4 Phases to learn your language the quickest way</h2>
 
         <div class="margin-bottom">
@@ -34,5 +34,8 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+    .shorten {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
 </style>

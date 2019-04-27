@@ -1,5 +1,5 @@
 <template>
-    <div class="center">
+    <div>
         <h2 class="margin-bottom">Translator</h2>
 
         <vs-row class="shorten">
@@ -42,7 +42,7 @@
             <vs-input :danger="this.targetLanguage === 'translated word'" :success="this.targetLanguage !== 'translated word'" danger-text="Select a language" :label-placeholder=targetLanguage v-model="translatedText" @keyup.enter="translate"/>
         </vs-row>
 
-        <vs-button class="margin-top" v-on:click="translate" type="line" size="large">Translate (Enter)</vs-button>
+        <vs-button class="margin-top center" v-on:click="translate" type="line" size="large" icon="translate">Translate (Enter)</vs-button>
     </div>
 </template>
 

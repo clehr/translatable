@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <Heading class="margin-bottom"/>
-        <TextArea @inputData="onTextAreaComponentChange" class="margin-bottom"/>
+        <TextArea @inputData="onTextAreaComponentChange"/>
         <PDFExport :pdfText=this.pdfText />
         <Translator class="margin-bottom margin-top"/>
         <hr>
@@ -54,5 +54,11 @@
 
     .margin-top {
         margin-top: 20px;
+    }
+
+    .center {
+        margin-left: 42%;
+        margin-right: 40%;
+        margin-bottom: 4%;
     }
 </style>
