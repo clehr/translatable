@@ -9,8 +9,6 @@
 </template>
 
 <script>
-    import {Vue} from "vue-axios";
-
     export default {
         name: 'Translator',
         data() {
@@ -21,9 +19,7 @@
         },
         methods: {
             translate: function () {
-                Vue.axios.get("https://api.predic8.de/shop/").then((response) => {
-                    console.log(response.data)
-                })
+               console.log("test")
             }
         }
     }
