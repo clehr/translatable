@@ -2,10 +2,6 @@
     <div class="center">
         <h2>Translator</h2>
 
-        <br>
-        <vs-button v-on:click="translate">Translate (Enter)</vs-button>
-        <br>
-        <br>
         <div class="dropdown">
             <vs-dropdown>
                 <a class="a-icon" href="#">
@@ -23,7 +19,6 @@
         </div>
 
         <vs-input :label-placeholder=sourceLanguage v-model="textToTranslate" @keyup.enter="translate"/>
-        <br>
 
         <div class="dropdown">
             <vs-dropdown>
@@ -41,6 +36,8 @@
             </vs-dropdown>
         </div>
         <vs-input :label-placeholder=targetLanguage v-model="translatedText" @keyup.enter="translate"/>
+
+        <vs-button v-on:click="translate">Translate (Enter)</vs-button>
     </div>
 </template>
 
