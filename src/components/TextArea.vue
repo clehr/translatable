@@ -1,15 +1,12 @@
 <template>
   <div>
-    <vs-button >Test</vs-button>
+    <vs-textarea label="Enter the text you want to translate here" width="300px" height="500px" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
+  name: 'TextArea',
 }
 </script>
 
