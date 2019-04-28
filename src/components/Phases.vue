@@ -1,5 +1,5 @@
 <template>
-    <div class="shorten white-background">
+    <div class="shorten white-background padding">
         <h2 class="margin-bottom">4 Phases to learn your language the quickest way</h2>
 
         <div class="margin-bottom">
@@ -42,5 +42,9 @@
     .white-background {
         background-color: #ffffff;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .padding {
+        padding: 10px 10px 10px 10px;
     }
 </style>
