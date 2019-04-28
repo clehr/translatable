@@ -7,6 +7,7 @@
         <Translator class="margin-bottom margin-top"/>
         <hr>
         <Phases class="margin-bottom margin-top"/>
+        <Impressum/>
     </div>
 </template>
 
@@ -16,10 +17,12 @@
     import Heading from "./components/Heading";
     import Phases from "./components/Phases";
     import PDFExport from "./components/PDFExport";
+    import Impressum from "./components/Impressum";
 
     export default {
         name: 'app',
         components: {
+            Impressum,
             PDFExport,
             Phases,
             Heading,
