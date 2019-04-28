@@ -16,7 +16,7 @@
 
         <div class="margin-bottom">
             <h3>3. Passive hearing:</h3>
-            Hear the text several times while doing something else like cleaning watching TV, etc.
+            Hear the text several times while doing something else like cleaning, watching TV, reading, etc.
         </div>
 
         <div class="margin-bottom">
