@@ -1,5 +1,5 @@
 <template>
-    <div class="shorten">
+    <div class="shorten white-background">
         <h2 class="margin-bottom">4 Phases to learn your language the quickest way</h2>
 
         <div class="margin-bottom">
@@ -37,5 +37,10 @@
     .shorten {
         margin-left: 10%;
         margin-right: 10%;
+    }
+
+    .white-background {
+        background-color: #ffffff;
+        box-shadow: 5px 5px 7px lightblue;
     }
 </style>

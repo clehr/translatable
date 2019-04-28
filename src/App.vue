@@ -40,6 +40,10 @@
 </script>
 
 <style>
+    html {
+        background-color: #fdfdfd;
+    }
+
     #app {
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
