@@ -59,7 +59,11 @@
                     {name: "French", locale: "fr"},
                     {name: "Spanish", locale: "es"},
                     {name: "Chinese", locale: "zh"},
-                    {name: "Portuguese", locale: "ps"}],
+                    {name: "Portuguese", locale: "pt"},
+                    {name: "Japanese", locale: "ja"},
+                    {name: "Russian", locale: "ru"},
+                    {name: "Arabic", locale: "ar"},
+                    ],
                 sourceLanguage: 'word to translate',
                 targetLanguage: 'translated word',
             }
