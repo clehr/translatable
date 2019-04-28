@@ -1,25 +1,12 @@
-<template xmlns:v-touch="http://www.w3.org/1999/xhtml">
+<template>
     <div>
-        <h2>{{tapText}}</h2>
-
-        <span v-touch:tap="tapHandler">Tap Me</span>
-
+        <h2>Welcome to Translatable!</h2>
     </div>
 </template>
 
 <script>
     export default {
         name: 'Heading',
-        data() {
-            return {
-                tapText: 'Welcome'
-            }
-        },
-        methods: {
-            tapHandler() {
-                this.tapText = 'Tap worked'
-            }
-        }
     }
 </script>
 
