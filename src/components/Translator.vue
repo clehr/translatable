@@ -56,6 +56,7 @@
                 textToTranslate: '',
                 translatedText: '',
                 languages: [{name: "German", locale: "de"},
+                    {name: "English", locale: "en"},
                     {name: "French", locale: "fr"},
                     {name: "Spanish", locale: "es"},
                     {name: "Chinese", locale: "zh"},
